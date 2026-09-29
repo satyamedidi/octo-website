@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#080808"/>
+  <circle cx="600" cy="280" r="8" fill="#f0f0f0"/>
+  <circle cx="600" cy="198" r="5" fill="#f0f0f0"/>
+  <circle cx="600" cy="362" r="5" fill="#f0f0f0"/>
+  <circle cx="530" cy="280" r="5" fill="#f0f0f0"/>
+  <circle cx="670" cy="280" r="5" fill="#f0f0f0"/>
+  <circle cx="548" cy="228" r="5" fill="#f0f0f0"/>
+  <circle cx="652" cy="228" r="5" fill="#f0f0f0"/>
+  <circle cx="548" cy="332" r="5" fill="#f0f0f0"/>
+  <circle cx="652" cy="332" r="5" fill="#f0f0f0"/>
+  <line x1="600" y1="272" x2="600" y2="203" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="600" y1="288" x2="600" y2="357" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="572" y1="280" x2="535" y2="280" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="628" y1="280" x2="665" y2="280" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="581" y1="259" x2="553" y2="233" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="619" y1="301" x2="647" y2="327" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="581" y1="301" x2="553" y2="327" stroke="#f0f0f0" stroke-width="2"/>
+  <line x1="619" y1="259" x2="647" y2="233" stroke="#f0f0f0" stroke-width="2"/>
+  <text x="600" y="470" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#f0f0f0" text-anchor="middle" letter-spacing="12">O C T O</text>
+  <text x="600" y="530" font-family="system-ui, sans-serif" font-size="24" fill="#666666" text-anchor="middle" letter-spacing="4">Intelligence that scales.</text>
+</svg>
