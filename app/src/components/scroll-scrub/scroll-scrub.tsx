@@ -605,6 +605,7 @@ export function ScrollScrub({
               <figure
                 className={`scroll-scrub__layer scroll-scrub__layer--${segment.kind}`}
                 data-scroll-scrub-layer=""
+                data-video-placeholder="true"
                 key={segment.key}
                 style={layerStyle}
               >
@@ -624,6 +625,15 @@ export function ScrollScrub({
                     src={segment.poster}
                   />
                 </picture>
+                {/* Storyboard fallback grid — shown when video is loading or unavailable */}
+                <div aria-hidden="true" className="scroll-scrub__storyboard-grid">
+                  <img alt="" loading="lazy" src={segment.poster} />
+                  <img alt="" loading="lazy" src={segment.poster} />
+                  <img alt="" loading="lazy" src={segment.poster} />
+                  <img alt="" loading="lazy" src={segment.poster} />
+                  <img alt="" loading="lazy" src={segment.poster} />
+                  <img alt="" loading="lazy" src={segment.poster} />
+                </div>
               </figure>
             );
           })}
