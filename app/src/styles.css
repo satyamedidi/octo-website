@@ -162,6 +162,12 @@
 
 :root {
   --radius: 0.625rem;
+  /* Octo — stark monochrome brand tokens */
+  --octo-bg: #080808;
+  --octo-ink: #f0f0f0;
+  --octo-accent: #d4d4d4;
+  --octo-muted: #666666;
+  --octo-border: #1e1e1e;
 }
 
 @layer base {

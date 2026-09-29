@@ -50,7 +50,7 @@ function Nav() {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "1.5rem clamp(1.25rem, 5vw, 4rem)",
-        background: "linear-gradient(to bottom, #080808 60%, transparent)",
+        background: "linear-gradient(to bottom, var(--octo-bg) 60%, transparent)",
       }}
     >
       <div
@@ -58,7 +58,7 @@ function Nav() {
           display: "flex",
           alignItems: "center",
           gap: "0.75rem",
-          color: "#f0f0f0",
+          color: "var(--octo-ink)",
           fontSize: "1.1rem",
           fontWeight: 700,
           letterSpacing: "0.08em",
@@ -88,7 +88,7 @@ function NavLink({
     <a
       href={href}
       style={{
-        color: "#666666",
+        color: "var(--octo-muted)",
         textDecoration: "none",
         fontSize: "0.85rem",
         letterSpacing: "0.06em",
@@ -96,10 +96,10 @@ function NavLink({
         transition: "color 0.2s",
       }}
       onMouseEnter={(e) =>
-        ((e.target as HTMLElement).style.color = "#f0f0f0")
+        ((e.target as HTMLElement).style.color = "var(--octo-ink)")
       }
       onMouseLeave={(e) =>
-        ((e.target as HTMLElement).style.color = "#666666")
+        ((e.target as HTMLElement).style.color = "var(--octo-muted)")
       }
     >
       {children}
@@ -123,8 +123,8 @@ function PrimaryCTA({
         alignItems: "center",
         gap: "0.5rem",
         padding: "0.65rem 1.25rem",
-        border: "1px solid #333333",
-        color: "#f0f0f0",
+        border: "1px solid var(--octo-muted)",
+        color: "var(--octo-ink)",
         textDecoration: "none",
         fontSize: "0.8rem",
         letterSpacing: "0.08em",
@@ -134,15 +134,15 @@ function PrimaryCTA({
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "#f0f0f0";
-        el.style.background = "#f0f0f0";
-        el.style.color = "#080808";
+        el.style.borderColor = "var(--octo-ink)";
+        el.style.background = "var(--octo-ink)";
+        el.style.color = "var(--octo-bg)";
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "#333333";
+        el.style.borderColor = "var(--octo-muted)";
         el.style.background = "transparent";
-        el.style.color = "#f0f0f0";
+        el.style.color = "var(--octo-ink)";
       }}
     >
       {children}
@@ -160,23 +160,23 @@ function OctoMark() {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <circle cx="14" cy="14" r="2.5" fill="#f0f0f0" />
-      <circle cx="14" cy="3.5" r="1.8" fill="#f0f0f0" />
-      <circle cx="14" cy="24.5" r="1.8" fill="#f0f0f0" />
-      <circle cx="3.5" cy="14" r="1.8" fill="#f0f0f0" />
-      <circle cx="24.5" cy="14" r="1.8" fill="#f0f0f0" />
-      <circle cx="6.1" cy="6.1" r="1.8" fill="#f0f0f0" />
-      <circle cx="21.9" cy="6.1" r="1.8" fill="#f0f0f0" />
-      <circle cx="6.1" cy="21.9" r="1.8" fill="#f0f0f0" />
-      <circle cx="21.9" cy="21.9" r="1.8" fill="#f0f0f0" />
-      <line x1="14" y1="11.5" x2="14" y2="5.3" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="14" y1="16.5" x2="14" y2="22.7" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="11.5" y1="14" x2="5.3" y2="14" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="16.5" y1="14" x2="22.7" y2="14" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="12.3" y1="12.3" x2="7.9" y2="7.9" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="15.7" y1="15.7" x2="20.1" y2="20.1" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="15.7" y1="12.3" x2="20.1" y2="7.9" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="12.3" y1="15.7" x2="7.9" y2="20.1" stroke="#f0f0f0" strokeWidth="1.2" />
+      <circle cx="14" cy="14" r="2.5" fill="var(--octo-ink)" />
+      <circle cx="14" cy="3.5" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="14" cy="24.5" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="3.5" cy="14" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="24.5" cy="14" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="6.1" cy="6.1" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="21.9" cy="6.1" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="6.1" cy="21.9" r="1.8" fill="var(--octo-ink)" />
+      <circle cx="21.9" cy="21.9" r="1.8" fill="var(--octo-ink)" />
+      <line x1="14" y1="11.5" x2="14" y2="5.3" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="14" y1="16.5" x2="14" y2="22.7" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="11.5" y1="14" x2="5.3" y2="14" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="16.5" y1="14" x2="22.7" y2="14" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="12.3" y1="12.3" x2="7.9" y2="7.9" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="15.7" y1="15.7" x2="20.1" y2="20.1" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="15.7" y1="12.3" x2="20.1" y2="7.9" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="12.3" y1="15.7" x2="7.9" y2="20.1" stroke="var(--octo-ink)" strokeWidth="1.2" />
     </svg>
   );
 }
@@ -204,7 +204,7 @@ function CapabilitiesSection() {
     <section
       id="capabilities"
       style={{
-        background: "#080808",
+        background: "var(--octo-bg)",
         padding: "clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 6rem)",
       }}
     >
@@ -240,14 +240,14 @@ function CapabilityCard({
     <article
       style={{
         padding: "clamp(1.5rem, 3vw, 2.5rem)",
-        borderTop: "1px solid #1e1e1e",
+        borderTop: "1px solid var(--octo-border)",
         textAlign: alignRight ? "right" : "left",
       }}
     >
       <div
         style={{
           marginBottom: "1.5rem",
-          color: "#f0f0f0",
+          color: "var(--octo-ink)",
           display: "flex",
           justifyContent: alignRight ? "flex-end" : "flex-start",
         }}
@@ -257,7 +257,7 @@ function CapabilityCard({
       <h3
         style={{
           margin: "0 0 0.75rem",
-          color: "#f0f0f0",
+          color: "var(--octo-ink)",
           fontSize: "clamp(1.1rem, 1.8vw, 1.35rem)",
           fontWeight: 600,
           letterSpacing: "-0.02em",
@@ -268,7 +268,7 @@ function CapabilityCard({
       <p
         style={{
           margin: 0,
-          color: "#666666",
+          color: "var(--octo-muted)",
           fontSize: "0.95rem",
           lineHeight: 1.65,
           maxWidth: "38ch",
@@ -284,15 +284,15 @@ function CapabilityCard({
 function NeuralIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <circle cx="16" cy="16" r="3" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="6" cy="8" r="2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="26" cy="8" r="2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="6" cy="24" r="2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="26" cy="24" r="2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <line x1="8.5" y1="9.5" x2="13.5" y2="14" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="23.5" y1="9.5" x2="18.5" y2="14" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="8.5" y1="22.5" x2="13.5" y2="18" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="23.5" y1="22.5" x2="18.5" y2="18" stroke="#f0f0f0" strokeWidth="1.2" />
+      <circle cx="16" cy="16" r="3" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="6" cy="8" r="2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="26" cy="8" r="2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="6" cy="24" r="2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="26" cy="24" r="2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <line x1="8.5" y1="9.5" x2="13.5" y2="14" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="23.5" y1="9.5" x2="18.5" y2="14" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="8.5" y1="22.5" x2="13.5" y2="18" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="23.5" y1="22.5" x2="18.5" y2="18" stroke="var(--octo-ink)" strokeWidth="1.2" />
     </svg>
   );
 }
@@ -300,16 +300,16 @@ function NeuralIcon() {
 function GraphIcon() {
   return (
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-      <circle cx="16" cy="6" r="2.2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="6" cy="18" r="2.2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="26" cy="18" r="2.2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="10" cy="27" r="2.2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <circle cx="22" cy="27" r="2.2" stroke="#f0f0f0" strokeWidth="1.5" />
-      <line x1="16" y1="8.2" x2="7.5" y2="16.2" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="16" y1="8.2" x2="24.5" y2="16.2" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="8" y1="20" x2="9.8" y2="25" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="24" y1="20" x2="22.2" y2="25" stroke="#f0f0f0" strokeWidth="1.2" />
-      <line x1="12.2" y1="27" x2="19.8" y2="27" stroke="#f0f0f0" strokeWidth="1.2" />
+      <circle cx="16" cy="6" r="2.2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="6" cy="18" r="2.2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="26" cy="18" r="2.2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="10" cy="27" r="2.2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <circle cx="22" cy="27" r="2.2" stroke="var(--octo-ink)" strokeWidth="1.5" />
+      <line x1="16" y1="8.2" x2="7.5" y2="16.2" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="16" y1="8.2" x2="24.5" y2="16.2" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="8" y1="20" x2="9.8" y2="25" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="24" y1="20" x2="22.2" y2="25" stroke="var(--octo-ink)" strokeWidth="1.2" />
+      <line x1="12.2" y1="27" x2="19.8" y2="27" stroke="var(--octo-ink)" strokeWidth="1.2" />
     </svg>
   );
 }
@@ -319,7 +319,7 @@ function BoltIcon() {
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
       <path
         d="M18 4L8 18H16L14 28L24 14H16L18 4Z"
-        stroke="#f0f0f0"
+        stroke="var(--octo-ink)"
         strokeWidth="1.5"
         strokeLinejoin="round"
       />
@@ -332,9 +332,9 @@ function PhilosophySection() {
     <section
       id="philosophy"
       style={{
-        background: "#080808",
+        background: "var(--octo-bg)",
         padding: "clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 6rem)",
-        borderTop: "1px solid #1e1e1e",
+        borderTop: "1px solid var(--octo-border)",
       }}
     >
       <blockquote
@@ -348,7 +348,7 @@ function PhilosophySection() {
       >
         <p
           style={{
-            color: "#f0f0f0",
+            color: "var(--octo-ink)",
             fontSize: "clamp(1.8rem, 4.5vw, 4rem)",
             fontWeight: 700,
             lineHeight: 1.08,
@@ -360,7 +360,7 @@ function PhilosophySection() {
         </p>
         <footer
           style={{
-            color: "#666666",
+            color: "var(--octo-muted)",
             fontSize: "0.85rem",
             letterSpacing: "0.08em",
             textTransform: "uppercase",
@@ -377,15 +377,15 @@ function CTASection() {
   return (
     <section
       style={{
-        background: "#080808",
+        background: "var(--octo-bg)",
         padding: "clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 6rem)",
-        borderTop: "1px solid #1e1e1e",
+        borderTop: "1px solid var(--octo-border)",
         textAlign: "center",
       }}
     >
       <p
         style={{
-          color: "#666666",
+          color: "var(--octo-muted)",
           fontSize: "0.75rem",
           letterSpacing: "0.14em",
           textTransform: "uppercase",
@@ -396,7 +396,7 @@ function CTASection() {
       </p>
       <h2
         style={{
-          color: "#f0f0f0",
+          color: "var(--octo-ink)",
           fontSize: "clamp(2rem, 5vw, 4.5rem)",
           fontWeight: 700,
           letterSpacing: "-0.04em",
@@ -417,8 +417,8 @@ function Footer() {
   return (
     <footer
       style={{
-        background: "#080808",
-        borderTop: "1px solid #1e1e1e",
+        background: "var(--octo-bg)",
+        borderTop: "1px solid var(--octo-border)",
         padding: "2rem clamp(1.25rem, 5vw, 4rem)",
         display: "flex",
         alignItems: "center",
@@ -432,36 +432,36 @@ function Footer() {
           display: "flex",
           alignItems: "center",
           gap: "0.75rem",
-          color: "#666666",
+          color: "var(--octo-muted)",
           fontSize: "0.8rem",
           letterSpacing: "0.06em",
           textTransform: "uppercase",
         }}
       >
         <svg width="18" height="18" viewBox="0 0 28 28" fill="none" aria-hidden="true">
-          <circle cx="14" cy="14" r="2.5" fill="#666666" />
-          <circle cx="14" cy="3.5" r="1.8" fill="#666666" />
-          <circle cx="14" cy="24.5" r="1.8" fill="#666666" />
-          <circle cx="3.5" cy="14" r="1.8" fill="#666666" />
-          <circle cx="24.5" cy="14" r="1.8" fill="#666666" />
-          <circle cx="6.1" cy="6.1" r="1.8" fill="#666666" />
-          <circle cx="21.9" cy="6.1" r="1.8" fill="#666666" />
-          <circle cx="6.1" cy="21.9" r="1.8" fill="#666666" />
-          <circle cx="21.9" cy="21.9" r="1.8" fill="#666666" />
-          <line x1="14" y1="11.5" x2="14" y2="5.3" stroke="#666666" strokeWidth="1.2" />
-          <line x1="14" y1="16.5" x2="14" y2="22.7" stroke="#666666" strokeWidth="1.2" />
-          <line x1="11.5" y1="14" x2="5.3" y2="14" stroke="#666666" strokeWidth="1.2" />
-          <line x1="16.5" y1="14" x2="22.7" y2="14" stroke="#666666" strokeWidth="1.2" />
-          <line x1="12.3" y1="12.3" x2="7.9" y2="7.9" stroke="#666666" strokeWidth="1.2" />
-          <line x1="15.7" y1="15.7" x2="20.1" y2="20.1" stroke="#666666" strokeWidth="1.2" />
-          <line x1="15.7" y1="12.3" x2="20.1" y2="7.9" stroke="#666666" strokeWidth="1.2" />
-          <line x1="12.3" y1="15.7" x2="7.9" y2="20.1" stroke="#666666" strokeWidth="1.2" />
+          <circle cx="14" cy="14" r="2.5" fill="var(--octo-muted)" />
+          <circle cx="14" cy="3.5" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="14" cy="24.5" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="3.5" cy="14" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="24.5" cy="14" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="6.1" cy="6.1" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="21.9" cy="6.1" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="6.1" cy="21.9" r="1.8" fill="var(--octo-muted)" />
+          <circle cx="21.9" cy="21.9" r="1.8" fill="var(--octo-muted)" />
+          <line x1="14" y1="11.5" x2="14" y2="5.3" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="14" y1="16.5" x2="14" y2="22.7" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="11.5" y1="14" x2="5.3" y2="14" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="16.5" y1="14" x2="22.7" y2="14" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="12.3" y1="12.3" x2="7.9" y2="7.9" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="15.7" y1="15.7" x2="20.1" y2="20.1" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="15.7" y1="12.3" x2="20.1" y2="7.9" stroke="var(--octo-muted)" strokeWidth="1.2" />
+          <line x1="12.3" y1="15.7" x2="7.9" y2="20.1" stroke="var(--octo-muted)" strokeWidth="1.2" />
         </svg>
         <span>Octo</span>
       </div>
       <p
         style={{
-          color: "#666666",
+          color: "var(--octo-muted)",
           fontSize: "0.75rem",
           margin: 0,
           letterSpacing: "0.04em",
